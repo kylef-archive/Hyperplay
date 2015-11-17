@@ -1,0 +1,6 @@
+framework module RxHyperdrive {
+  umbrella header "RxHyperdrive-umbrella.h"
+
+  export *
+  module * { export * }
+}

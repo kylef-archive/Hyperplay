@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		27E4CEEF1BFB2E63006D2D15 /* Hyperplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E4CEEE1BFB2E63006D2D15 /* Hyperplay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49DF47049602D1E917E4F59A /* Pods_Hyperplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5010762C940AC3FF2E2A1945 /* Pods_Hyperplay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DB4AD431BC3B18CEE08A677 /* Pods-Hyperplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hyperplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hyperplay/Pods-Hyperplay.release.xcconfig"; sourceTree = "<group>"; };
 		27E4CEEB1BFB2E63006D2D15 /* Hyperplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hyperplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E4CEEE1BFB2E63006D2D15 /* Hyperplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hyperplay.h; sourceTree = "<group>"; };
 		27E4CEF01BFB2E63006D2D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5010762C940AC3FF2E2A1945 /* Pods_Hyperplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hyperplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76E47239CCFE6378C65A6451 /* Pods-Hyperplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hyperplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hyperplay/Pods-Hyperplay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +25,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DF47049602D1E917E4F59A /* Pods_Hyperplay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +37,8 @@
 			children = (
 				27E4CEED1BFB2E63006D2D15 /* Hyperplay */,
 				27E4CEEC1BFB2E63006D2D15 /* Products */,
+				E7C55256BB52E1B4DA4D9D44 /* Pods */,
+				EB4D7B42B4F4B16ED5A99AC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +59,23 @@
 			path = Hyperplay;
 			sourceTree = "<group>";
 		};
+		E7C55256BB52E1B4DA4D9D44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76E47239CCFE6378C65A6451 /* Pods-Hyperplay.debug.xcconfig */,
+				1DB4AD431BC3B18CEE08A677 /* Pods-Hyperplay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB4D7B42B4F4B16ED5A99AC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5010762C940AC3FF2E2A1945 /* Pods_Hyperplay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -70,10 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27E4CEF31BFB2E63006D2D15 /* Build configuration list for PBXNativeTarget "Hyperplay" */;
 			buildPhases = (
+				8F52D6F640767D598263A3C8 /* Check Pods Manifest.lock */,
 				27E4CEE61BFB2E63006D2D15 /* Sources */,
 				27E4CEE71BFB2E63006D2D15 /* Frameworks */,
 				27E4CEE81BFB2E63006D2D15 /* Headers */,
 				27E4CEE91BFB2E63006D2D15 /* Resources */,
+				943CBCAAFC2518209F2A6A1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +150,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F52D6F640767D598263A3C8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		943CBCAAFC2518209F2A6A1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hyperplay/Pods-Hyperplay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27E4CEE61BFB2E63006D2D15 /* Sources */ = {
@@ -224,6 +283,7 @@
 		};
 		27E4CEF41BFB2E63006D2D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E47239CCFE6378C65A6451 /* Pods-Hyperplay.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -242,6 +302,7 @@
 		};
 		27E4CEF51BFB2E63006D2D15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB4AD431BC3B18CEE08A677 /* Pods-Hyperplay.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -277,6 +338,7 @@
 				27E4CEF51BFB2E63006D2D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

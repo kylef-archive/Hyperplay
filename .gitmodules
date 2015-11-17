@@ -1,0 +1,9 @@
+[submodule "RxHyperdrive"]
+	path = RxHyperdrive
+	url = https://github.com/kylef/RxHyperdrive
+[submodule "Hyperdrive"]
+	path = Hyperdrive
+	url = https://github.com/the-hypermedia-project/Hyperdrive
+[submodule "Representor"]
+	path = Representor
+	url = https://github.com/the-hypermedia-project/representor-swift
