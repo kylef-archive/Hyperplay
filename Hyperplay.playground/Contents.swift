@@ -7,7 +7,7 @@ import RxHyperdrive
 
 
 let hyperdrive = Hyperdrive()
-hyperdrive.enter("http://localhost:8000/")
+hyperdrive.enter("https://polls.apiblueprint.org/")
    // Follow the `questions` transition
   .flatMap { hyperdrive.request($0.transitions["questions"]) }
   .subscribeNext {
